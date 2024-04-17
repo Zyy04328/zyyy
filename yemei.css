@@ -1,0 +1,33 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+}
+div{
+	overflow: hidden;
+}
+img{
+	border: 0;
+}
+a{
+	
+	text-decoration: none;
+	color: rgb(136, 97, 97);
+}
+#Header{
+	width: 100%;
+	background-image: linear-gradient(to top,#7e8e85,#b185dd);
+	border-top:1px solid #eee;
+}
+#header{
+	width: 1200px;
+	margin: 0 auto;
+	height: 40px;	
+	text-align: end;
+}
+#img_header_photo{
+	float: right;
+	margin-right: 9px;
+	margin-top: 10px;
+	display:inline;
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息</title>
+    <link rel="stylesheet" href="yemei.css">
+    <link rel="stylesheet" href="daohanglan.css">
+    <style>
+        body{
+            background-image: url(/png/tiankong.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto;
+            color: #706060;
+        }
+        th, td {
+            text-align: center;
+            border: 1px solid rgb(73, 63, 63);
+            padding: 10px;
+        }
+        th {
+            background-color: #644e4e;
+        }    
+        
+
+        a {  
+            color: #8b6565;  
+            text-decoration: none;  
+            font-size: 23px;  
+        }  
+        * {
+            font-family: "kaiti";
+            font-weight: 700;
+            font-size: 16px;
+            color: #5cb29b;
+        }
+        button {
+            background-color: #c56666;
+            color: #706060;
+            font-size: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+     
+        h1{
+            text-align: center;
+            background-color: #999f8c;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 20px;
+        }
+ 
+    </style>
+</head>
+<body>
+
+    <div id="Header">
+		<div id="header">
+			<a href="">欢迎来到Zy的网站！</a>
+		</div>
+	</div>
+
+  <div id="t">
+		<a href="#" id="logo"></a>
+		<nav id="t">
+			<span>
+				<a href="http://127.0.0.1:5500/%E4%B8%AA%E4%BA%BA%E7%95%8C%E9%9D%A2/index.html" class="t" id="t">个人简历</a><span class="c_">|</span>
+				<a href="http://127.0.0.1:5500/%E4%B8%AA%E4%BA%BA%E7%95%8C%E9%9D%A2/%E6%88%90%E7%BB%A9.html" class="t">成绩表</a><span class="c_">|</span>
+				<a href="https://www.csdn.net/" class="t"> CSDN </a><span class="c_">|</span>
+				<a href="https://www.sina.com.cn/" class="t">新闻动态</a><span class="c_">|</span>
+				<a href="https://www.chzu.edu.cn/" class="t">学校简介</a><span class="c_">|</span>
+				<a href="http://127.0.0.1:5500/1/%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A22.html" class="t">登录</a>
+			</span>
+		</nav>
+	</div>
+    
+     <h1 style="text-align:center" >个人成绩表</h1>
+     
+    <button onclick="addRow()">新增数据</button>
+    
+    <table id ="table" border="1" align="center">
+        <tr id="title">
+            <th >科目名称</th>
+            <th >学分</th>
+            <th >成绩</th>
+            <th >操作</th>
+        </tr>
+        <tr>
+            <td>高等数学</td>
+            <td>3</td>
+            <td>90</td>
+            <td><button onclick="editRow(this)">修改</button> <button onclick="deleteRow(this)">删除</button>
+        </tr>
+        <tr>
+            <td>数据结构</td>
+            <td>3</td>
+            <td>85</td>
+            <td><button onclick="editRow(this)">修改</button> <button onclick="deleteRow(this)">删除</button>
+        </tr>
+        <tr>
+            <td>大学物理</td>
+            <td>3</td>
+            <td>95</td>
+            <td><button onclick="editRow(this)">修改</button> <button onclick="deleteRow(this)">删除</button>
+        </tr>
+        
+    </table>
+
+    <script >
+        function addRow() { //修改数据函数
+         var table = document.getElementById("table");  
+         var lenth = table.rows.length;  //获取行数 
+         var row = table.insertRow(lenth);  //在最后一行插入一行 
+         console.log(row); 
+        //  console.log(lenth); 
+        var kemu = row.insertCell(0);  //在第一列插入单元格 
+        var xuefen = row.insertCell(1);  //在第二列插入单元格 
+        var chengji = row.insertCell(2);  //在第三列插入单元格 
+        var caozuo = row.insertCell(3);  //在第四列插入单元格 
+       
+        kemu.innerHTML = "未命名"; 
+        xuefen.innerHTML = "0"; 
+        chengji.innerHTML = '0';
+        caozuo.innerHTML = '<button onclick="editRow(this)">修改</button> <button onclick="deleteRow(this)">删除</button>';
+        
+     }
+     // 删除函数
+     function deleteRow(button) {
+        var row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+     }
+     // 修改函数
+     function editRow(button) {
+            var row = button.parentNode.parentNode;
+            var kemu = row.cells[0];
+            var xuefen = row.cells[1];
+            var chengji = row.cells[2];
+
+            var inputKemu = prompt("请输入科目名称：");
+            var inputXuefen = prompt("请输入学分：");
+            var inputChengji = prompt("请输入成绩：");
+
+            if (inputKemu != null) { kemu.innerHTML = inputKemu;}
+            if (inputXuefen != null) { xuefen.innerHTML = inputXuefen;}
+            if (inputChengji != null) { chengji.innerHTML = inputChengji;}
+        }
+    </script>
+</body>
+</html>

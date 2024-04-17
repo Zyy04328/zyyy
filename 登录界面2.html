@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="yemei.css">
+    <link rel="stylesheet" href="daohanglan.css">
+    <link rel="stylesheet" href="登录.css">
+    <style> 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: kaiTi;
+
+    }
+    #logo{
+        font-size: 20px;
+        font-weight: 20;
+        color: #82c681;
+        text-decoration: none;  
+        padding: 10px;
+        margin-left: 40px;      
+    }
+         body{
+            background-image: url(/png/richu.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="Header">
+		<div id="header">
+			<a href="" id="logo">欢迎来到Zy的网站！</a>
+		</div>
+	</div>
+
+  <div id="t">
+		<a href="#" id="logo"></a>
+		<nav id="t">
+			<span>
+				<a href="http://127.0.0.1:5500/%E4%B8%AA%E4%BA%BA%E7%95%8C%E9%9D%A2/index.html" class="t" id="t">个人简历</a><span class="c_">|</span>
+				<a href="http://127.0.0.1:5500/1/%E6%88%90%E7%BB%A9.html" class="t">成绩表</a><span class="c_">|</span>
+				<a href="https://www.csdn.net/" class="t"> CSDN </a><span class="c_">|</span>
+				<a href="https://www.sina.com.cn/" class="t">新闻动态</a><span class="c_">|</span>
+				<a href="https://www.chzu.edu.cn/" class="t">学校简介</a><span class="c_">|</span>
+				<a href="http://127.0.0.1:5500/1/%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2.html" class="t">登录</a>
+			</span>
+		</nav>
+	</div>
+
+
+    <head>
+		<meta charset="utf-8">
+		<title>登录页面</title>
+	</head>
+	<body>
+		<form action="#" method="post">
+			<div class="form-control">
+				<label for="username">账号</label>
+				<input type="text" id="username" name="username" class="number" />
+			<div class="form-control">
+				<label for="password">密码</label>
+				<input type="password" id="password" name="pas" class="pas"    />
+			<button class="loginbtn" >登录</button>
+		</form>
+	</body>
+    <script>
+        var button = document.getElementsByTagName("button")[0];
+        button.onclick = function(){
+            alert("登录成功！");
+        }
+    </script>
+    
+</body>
+</html>
